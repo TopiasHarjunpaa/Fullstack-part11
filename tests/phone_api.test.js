@@ -4,7 +4,7 @@ const app = require('../app')
 
 const api = supertest(app)
 
-test('notes are returned as json', async () => {
+test('persons are returned as json', async () => {
   await api
     .get('/api/persons')
     .expect(200)
