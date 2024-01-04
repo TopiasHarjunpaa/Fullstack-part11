@@ -25,12 +25,12 @@ const App = () => {
   const addPerson = (event) => {
     event.preventDefault()
     const personNames = persons.map(person => person.name)
-    
-    if (personNames.includes(newName) && newNumber !== "") {
+
+    if (personNames.includes(newName) && newNumber !== '') {
       const message = `${newName} is already added to phonebook, replace the old number with new one?`
       if (window.confirm(message)) {
         const person = persons.find(person => person.name === newName)
-        const updatedPerson = {...person, number: newNumber}
+        const updatedPerson = { ...person, number: newNumber }
         personService
           .updateNumber(person.id, updatedPerson)
           .then(returnedPerson => {
@@ -58,7 +58,7 @@ const App = () => {
         })
         .catch(error => {
           console.log(error.response.data)
-          setErrorMessage(error.response.data.error)          
+          setErrorMessage(error.response.data.error)
         })
     }
     setTimeout(() => {
@@ -104,7 +104,7 @@ const App = () => {
       <Error message={errorMessage}/>
       <Filter handleFilterChange={handleFilterChange}/>
       <h3>Add a new</h3>
-      <PersonForm 
+      <PersonForm
         persons={persons}
         newName={newName}
         newNumber={newNumber}
@@ -113,8 +113,8 @@ const App = () => {
         handleNumberChange={handleNumberChange}
       />
       <h3>Numbers</h3>
-      <Persons 
-        persons={persons} 
+      <Persons
+        persons={persons}
         filter={filter}
         deletePerson={deletePerson}
       />

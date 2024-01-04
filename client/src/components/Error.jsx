@@ -13,7 +13,7 @@ const Error = ({ message }) => {
     <div style={errorStyle}>
       {message}
     </div>
-  )  
+  )
 }
 
 export default Error

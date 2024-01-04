@@ -1,4 +1,4 @@
-import axios from "axios"
+import axios from 'axios'
 const baseUrl = '/api/persons'
 
 const getAll = () => {
@@ -20,4 +20,4 @@ const updateNumber = (id, newObject) => {
   return request.then(response => response.data)
 }
 
-export default { getAll, create, del, updateNumber}
+export default { getAll, create, del, updateNumber }
