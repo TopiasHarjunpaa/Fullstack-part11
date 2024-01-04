@@ -21,3 +21,5 @@ jobs:
         run: npm run lint
       - name: Check client style
         run: cd client && npm run lint && cd ..
+      - name: Test server
+        run: npm run test
