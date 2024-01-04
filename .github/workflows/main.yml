@@ -6,9 +6,16 @@ on:
       - master
 
 jobs:
-  hello_world_job:
+  deployment_pipeline:
     runs-on: ubuntu-20.04
     steps:
-      - name: Say hello
-        run: |
-          echo "Hello World!"
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+      - name: Install dependencies
+        run: npm install
+        run: cd client && npm install && cd ..
+      - name: Check style
+        run: npm run eslint
+        run: cd client && npm run eslint && cd ..
