@@ -13,9 +13,11 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '16'
-      - name: Install dependencies
+      - name: Install server dependencies
         run: npm install
+      - name: Install client dependencies
         run: cd client && npm install && cd ..
-      - name: Check style
+      - name: Check server style
         run: npm run eslint
+      - name: Check client style
         run: cd client && npm run eslint && cd ..
