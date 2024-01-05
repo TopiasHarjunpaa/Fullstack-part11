@@ -6,9 +6,6 @@
 app = "fullstack-part11-phonebook"
 primary_region = "arn"
 
-[deploy]
-  release_command = "npm run build:ui"
-
 [processes]
   app = "node index.js"
 
