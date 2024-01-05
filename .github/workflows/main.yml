@@ -1,4 +1,4 @@
-name: Hello World!
+name: Pipeline
 
 on:
   push:
@@ -21,3 +21,7 @@ jobs:
         run: npm run lint
       - name: Check client style
         run: cd client && npm run lint && cd ..
+      - name: Test server
+        run: npm run test
+        env:
+          TEST_MONGODB_URI: ${{ secrets.TEST_MONGODB_URI }}
