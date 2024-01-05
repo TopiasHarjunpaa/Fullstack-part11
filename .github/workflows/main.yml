@@ -28,7 +28,7 @@ jobs:
       - name: Test client
         run: cd client && npm run test && cd ..
 
-    deploy:
+  deploy:
     if: ${{ github.event_name == 'push' && !contains(join(github.event.commits.*.message, ' '), '#skip') }}
     needs: [deployment_pipeline]
     runs-on: ubuntu-20.04
