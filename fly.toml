@@ -6,7 +6,15 @@
 app = "fullstack-part11-phonebook"
 primary_region = "arn"
 
+[deploy]
+  release_command = "npm run build:ui"
+
+[processes]
+  app = "node index.js"
+
 [build]
+  [build.args]
+    NODE_VERSION = "20.6.1"  
 
 [env]
   PORT = "3000"

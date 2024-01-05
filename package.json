@@ -1,4 +1,7 @@
 {
+  "engines": { 
+    "node": "20.6.1" 
+  },
   "name": "fullstack-part11",
   "version": "1.0.0",
   "description": "",
