@@ -18,5 +18,5 @@ Application is hosted in Fly.io: https://fullstack-part11-phonebook.fly.dev/
 |    2-9    |    8/8    |   2 h    |
 |   10-12   |    3/3    |   3 h    |
 |   13-17   |    5/5    |   3 h    |
-|   18-21   |    3/4    |   19 h    |
-| **Total** | **20/21** | **28 h** |
+|   18-21   |    4/4    |   19 h    |
+| **Total** | **21/21** | **28 h** |
